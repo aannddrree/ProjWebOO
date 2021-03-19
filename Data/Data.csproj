@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DogDB.cs" />
+    <Compile Include="IDogDB.cs" />
+    <Compile Include="ILogDB.cs" />
+    <Compile Include="LogDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

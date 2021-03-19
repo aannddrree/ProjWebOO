@@ -42,6 +42,15 @@ namespace ProjWebOO
         protected global::System.Web.UI.WebControls.TextBox txtNome;
 
         /// <summary>
+        /// Controle btnNovo.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnNovo;
+
+        /// <summary>
         /// Controle btnInserir.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace ProjWebOO
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnInserir;
+
+        /// <summary>
+        /// Controle btnLogs.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnLogs;
 
         /// <summary>
         /// Controle lblMSG.
@@ -67,5 +85,14 @@ namespace ProjWebOO
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GVDog;
+
+        /// <summary>
+        /// Controle GVLog.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GVLog;
     }
 }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Proxy;
 
 namespace ProjWebOO
 {
@@ -13,8 +14,7 @@ namespace ProjWebOO
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            GVDog.DataSource = new DogDB().Select();
-            GVDog.DataBind();
+            ReloadTable();
         }
 
         protected void btnInserir_Click(object sender, EventArgs e)
@@ -24,9 +24,57 @@ namespace ProjWebOO
                 Name = txtNome.Text
             };
 
-            new DogDB().Insert(dog);
+            if (this.Crud().Insert(dog))
+            {
+                lblMSG.Text = "Registro Inserido!";
+                SaveLog("Registro Inserido!");
+                ReloadTable();
+            }
+            else
+            {
+                lblMSG.Text = "Erro ao inserir registro!";
+                SaveLog("Erro ao inserir registro!");
+            }
+        }
 
-            lblMSG.Text = "Registro Inserido!";
+        private void ReloadTable()
+        {
+            GVDog.DataSource = this.Crud().Select();
+            GVDog.DataBind();
+            SaveLog("Consultou Informações");
+        }
+
+        private IDogDB Crud()
+        {
+            return new DogDB();
+        }
+
+        private void SaveLog(string msg)
+        {
+            IMonitore proxy = new Proxy.Proxy(new LogDB());
+            proxy.SaveLog(msg);
+        }
+
+        private List<Log> GetLogs()
+        {
+            IMonitore proxy = new Proxy.Proxy(new LogDB());
+            return proxy.Select();
+        }
+
+        protected void btnLogs_Click(object sender, EventArgs e)
+        {
+            GVLog.DataSource = GetLogs();
+            GVLog.DataBind();
+            SaveLog("Consultou Logs");
+        }
+
+        protected void btnNovo_Click(object sender, EventArgs e)
+        {
+            txtNome.Text = "";
+            lblMSG.Text = "";
+            GVLog.DataSource = null;
+            GVLog.DataBind();
+            txtNome.Focus();
         }
     }
 }

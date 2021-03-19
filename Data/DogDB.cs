@@ -9,27 +9,28 @@ using Util;
 
 namespace Data
 {
-    public class DogDB
+    public class DogDB : IDogDB
     {
-        private ConnectionDB conn;
+        private ConnectionDB _conn;
 
-        public void Insert(Dog dog)
+        public bool Insert(Dog dog)
         {
-            string sql = string.Format("INSERT INTO TB_DOG (name) VALUES ('{0}')", dog.Name);
+            bool status = false;
+            string sql = string.Format(Dog.INSERT, dog.Name);
 
-            using (conn = ConnectionDB.GetConnection())
+            using (_conn = new ConnectionDB())
             {
-                conn.ExecQuery(sql);
-            }   
+                status = _conn.ExecQuery(sql);
+            }
+            return status;
         }
 
         public List<Dog> Select()
         {
-
-            using (conn = ConnectionDB.GetConnection())
+            using (_conn = new ConnectionDB())
             {
-                string sql = "SELECT id, name FROM TB_DOG";
-                var returnData = conn.ExecQueryReturn(sql);
+                string sql = Dog.SELECT;
+                var returnData = _conn.ExecQueryReturn(sql);
                 return TransformSQLReaderToList(returnData);
             }
         }

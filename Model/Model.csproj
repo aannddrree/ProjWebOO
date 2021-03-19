@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dog.cs" />
+    <Compile Include="Log.cs" />
     <Compile Include="Pet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

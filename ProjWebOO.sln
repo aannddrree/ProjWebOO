@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Util", "Util\Util.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{F81E2C31-FBA0-49F4-94DE-F30829168102}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxy", "Proxy\Proxy.csproj", "{4FBB3EEE-28AF-4CE8-AF5C-F091286D408F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{5315751C-FD1C-459C-B614-5599D54CFE24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{F81E2C31-FBA0-49F4-94DE-F30829168102}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F81E2C31-FBA0-49F4-94DE-F30829168102}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F81E2C31-FBA0-49F4-94DE-F30829168102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FBB3EEE-28AF-4CE8-AF5C-F091286D408F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FBB3EEE-28AF-4CE8-AF5C-F091286D408F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FBB3EEE-28AF-4CE8-AF5C-F091286D408F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FBB3EEE-28AF-4CE8-AF5C-F091286D408F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5315751C-FD1C-459C-B614-5599D54CFE24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5315751C-FD1C-459C-B614-5599D54CFE24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5315751C-FD1C-459C-B614-5599D54CFE24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5315751C-FD1C-459C-B614-5599D54CFE24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
